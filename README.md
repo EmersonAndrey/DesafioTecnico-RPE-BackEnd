@@ -159,6 +159,21 @@ Também é possível testar com ferramentas como Postman ou Insomnia.
 | PUT    | `api/faturas/{id}/pagamento`    | Registra pagamento para uma fatura      |
 | GET    | `api/faturas/atrasadas`         |  Lista faturas em atraso                |
 
+### 🧪 Exemplo de requisição(GET `api/faturas/{id}`)
+
+```json
+[
+ {
+  "id": 2,
+  "nomeCliente": "João",
+  "dataVencimento": "2025-07-15",
+  "dataPagamento": null,
+  "valor": 750.0,
+  "statusFatura": "B"
+ }
+]
+```
+
 ---
 
 ## 💡 Melhorias Futuras
