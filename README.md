@@ -87,7 +87,7 @@ docker-compose up --build
 
 ## 🔁 Regras de Negócio Implementadas
 
-- Ao registrar um pagamento, o status da fatura muda para Paga.Ao registrar um pagamento, o status da fatura muda para `Paga`.
+- Ao registrar um pagamento, o status da fatura muda para `Paga`.
 - Se o pagamento não for feito até 3 dias após o vencimento, o cliente é marcado como `Bloqueado`.
 - Clientes `Bloqueados` têm seu limite de crédito atualizado para R$ 0,00.
 - Essa verificação ocorre automaticamente todo dia às 12:00h via `@Scheduled`.
@@ -137,7 +137,19 @@ Também é possível testar com ferramentas como Postman ou Insomnia.
 | POST   | `api/clientes`                  | Cadastra novo cliente      |
 | GET    | `api/clientes/{id}`             | Consulta cliente por ID    |
 | PUT    | `api/clientes/{id}`             | Atualiza/bloqueia cliente  |
-| GET    | `API/clientes/bloqueados`       | Lista clientes bloqueados  |
+| GET    | `api/clientes/bloqueados`       | Lista clientes bloqueados  |
+
+### 🧪 Exemplo de requisição(POST `api/clientes`)
+
+```json
+{
+ "nome": "Emerson",
+ "cpf": "03937142096",
+ "dataNascimento": "2003-11-27",
+ "statusBloqueio": "A",
+ "limiteCredito": 5000
+}
+```
 
 ### 🔐 Fatura
 
@@ -146,6 +158,21 @@ Também é possível testar com ferramentas como Postman ou Insomnia.
 | GET    | `api/faturas/{id}`              | Lista todas as faturas de um cliente    |
 | PUT    | `api/faturas/{id}/pagamento`    | Registra pagamento para uma fatura      |
 | GET    | `api/faturas/atrasadas`         |  Lista faturas em atraso                |
+
+### 🧪 Exemplo de requisição(GET `api/faturas/{id}`)
+
+```json
+[
+ {
+  "id": 2,
+  "nomeCliente": "João",
+  "dataVencimento": "2025-07-15",
+  "dataPagamento": null,
+  "valor": 750.0,
+  "statusFatura": "B"
+ }
+]
+```
 
 ---
 
