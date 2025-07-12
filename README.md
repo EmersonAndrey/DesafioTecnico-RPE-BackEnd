@@ -87,7 +87,7 @@ docker-compose up --build
 
 ## 🔁 Regras de Negócio Implementadas
 
-- Ao registrar um pagamento, o status da fatura muda para Paga.Ao registrar um pagamento, o status da fatura muda para `Paga`.
+- Ao registrar um pagamento, o status da fatura muda para `Paga`.
 - Se o pagamento não for feito até 3 dias após o vencimento, o cliente é marcado como `Bloqueado`.
 - Clientes `Bloqueados` têm seu limite de crédito atualizado para R$ 0,00.
 - Essa verificação ocorre automaticamente todo dia às 12:00h via `@Scheduled`.
