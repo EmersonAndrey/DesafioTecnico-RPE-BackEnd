@@ -139,7 +139,7 @@ Também é possível testar com ferramentas como Postman ou Insomnia.
 | PUT    | `api/clientes/{id}`             | Atualiza/bloqueia cliente  |
 | GET    | `api/clientes/bloqueados`       | Lista clientes bloqueados  |
 
-### Exemplo de requisição(POST `api/clientes`)
+### 🧪 Exemplo de requisição(POST `api/clientes`)
 
 ```json
 {
