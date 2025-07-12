@@ -137,7 +137,7 @@ Também é possível testar com ferramentas como Postman ou Insomnia.
 | POST   | `api/clientes`                  | Cadastra novo cliente      |
 | GET    | `api/clientes/{id}`             | Consulta cliente por ID    |
 | PUT    | `api/clientes/{id}`             | Atualiza/bloqueia cliente  |
-| GET    | `API/clientes/bloqueados`       | Lista clientes bloqueados  |
+| GET    | `api/clientes/bloqueados`       | Lista clientes bloqueados  |
 
 ### 🔐 Fatura
 
