@@ -139,6 +139,18 @@ Também é possível testar com ferramentas como Postman ou Insomnia.
 | PUT    | `api/clientes/{id}`             | Atualiza/bloqueia cliente  |
 | GET    | `api/clientes/bloqueados`       | Lista clientes bloqueados  |
 
+### Exemplo de requisição(POST `api/clientes`)
+
+```json
+{
+ "nome": "Emerson",
+ "cpf": "03937142096",
+ "dataNascimento": "2003-11-27",
+ "statusBloqueio": "A",
+ "limiteCredito": 5000
+}
+```
+
 ### 🔐 Fatura
 
 | Método | Endpoint                        | Descrição                               |
