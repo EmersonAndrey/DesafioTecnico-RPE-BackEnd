@@ -3,6 +3,7 @@ package com.rpe.desafioTecnico.model.dto;
 import java.time.LocalDate;
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rpe.desafioTecnico.enums.StatusBloqueio;
 
 public class ClienteResponseDTO {
@@ -10,9 +11,11 @@ public class ClienteResponseDTO {
     private Long id;
     private String cpf;
     private String nome;
-    private LocalDate dataNascimento;
     private StatusBloqueio statusBloqueio;
     private Float limiteCredito;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    private LocalDate dataNascimento;
     private List<FaturaResponseDTO> faturas;
 
     public String getCpf() {

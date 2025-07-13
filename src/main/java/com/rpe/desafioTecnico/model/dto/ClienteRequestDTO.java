@@ -4,6 +4,7 @@ import java.time.LocalDate;
 
 import org.hibernate.validator.constraints.br.CPF;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rpe.desafioTecnico.enums.StatusBloqueio;
 
 import jakarta.validation.constraints.NotBlank;
@@ -19,6 +20,7 @@ public class ClienteRequestDTO {
     private String cpf;
 
     @NotNull(message = "A data de nascimento do cliente deve ser informada")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
     private LocalDate dataNascimento;
 
     @NotNull(message = "O status de bloqueio do cliente deve ser informado")

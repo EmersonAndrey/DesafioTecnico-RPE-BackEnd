@@ -2,16 +2,21 @@ package com.rpe.desafioTecnico.model.dto;
 
 import java.time.LocalDate;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.rpe.desafioTecnico.enums.StatusFatura;
 
 public class FaturaResponseDTO {
 
     private Long id;
     private String nomeCliente;
-    private LocalDate dataVencimento;
-    private LocalDate dataPagamento;
     private float valor;
     private StatusFatura statusFatura;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    private LocalDate dataVencimento;
+
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
+    private LocalDate dataPagamento;
 
     public LocalDate getDataPagamento() {
         return dataPagamento;
