@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.rpe.desafioTecnico.enums.StatusBloqueio;
 import com.rpe.desafioTecnico.enums.StatusFatura;
 import com.rpe.desafioTecnico.exception.Fatura.FaturaNaoEncontradaException;
 import com.rpe.desafioTecnico.mapper.FaturaMapper;
@@ -41,6 +42,7 @@ public class FaturaService {
 
         fatura.setStatusFatura(StatusFatura.P);
         fatura.setDataPagamento(LocalDate.now());
+        fatura.getCliente().setStatusBloqueio(StatusBloqueio.A);
 
         Fatura faturaPaga = faturaRepository.save(fatura);
 
