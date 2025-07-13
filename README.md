@@ -6,6 +6,11 @@ API RESTful desenvolvida para gerenciar clientes e suas respectivas faturas. O s
 
 ## 🧱 Tecnologias Utilizadas
 
+🔹 **Frontend**
+- ⚛️ React
+- 🎨 HTML + CSS
+- 🎛️ Bootstrap
+
 🔹 **Backend**
  - ☕ Java 17  
  - 🧩 Spring Boot
