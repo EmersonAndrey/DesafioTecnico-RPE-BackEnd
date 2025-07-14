@@ -38,7 +38,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(ClienteJaExistenteException.class)
     public ResponseEntity<MensagemErro> handlerClienteJaaExistente(ClienteJaExistenteException ex) {
         return ResponseEntity.status(HttpStatus.NOT_FOUND)
-                .body(new MensagemErro(ex.getMessage(), HttpStatus.NOT_FOUND.value()));
+                .body(new MensagemErro(ex.getMessage(), HttpStatus.CONFLICT.value()));
     }
 
      @ExceptionHandler(FaturaNaoEncontradaException.class)

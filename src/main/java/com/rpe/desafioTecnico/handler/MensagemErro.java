@@ -2,16 +2,16 @@ package com.rpe.desafioTecnico.handler;
 
 public class MensagemErro {
 
-    private String mensagem;
+    private String message;
     private int status;
 
-    public MensagemErro(String mensagem, int status) {
-        this.mensagem = mensagem;
+    public MensagemErro(String message, int status) {
+        this.message = message;
         this.status = status;
     }
 
-    public String getMensagem() {
-        return mensagem;
+    public String getMessage() {
+        return message;
     }
 
     public int getStatus() {
