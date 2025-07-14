@@ -14,11 +14,13 @@ import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import com.rpe.desafioTecnico.enums.StatusBloqueio;
 import com.rpe.desafioTecnico.enums.StatusFatura;
 import com.rpe.desafioTecnico.exception.Fatura.FaturaNaoEncontradaException;
 import com.rpe.desafioTecnico.mapper.FaturaMapper;
 import com.rpe.desafioTecnico.model.dto.ClienteResponseDTO;
 import com.rpe.desafioTecnico.model.dto.FaturaResponseDTO;
+import com.rpe.desafioTecnico.model.entities.Cliente;
 import com.rpe.desafioTecnico.model.entities.Fatura;
 import com.rpe.desafioTecnico.repository.FaturaRepository;
 
@@ -46,6 +48,12 @@ public class FaturaServiceTest {
         fatura.setId(1L);
         fatura.setStatusFatura(StatusFatura.A);
         fatura.setDataPagamento(null);
+
+        Cliente cliente = new Cliente();
+        cliente.setId(1L);
+        cliente.setStatusBloqueio(StatusBloqueio.B); 
+
+        fatura.setCliente(cliente);
 
         faturaResponseDTO = new FaturaResponseDTO();
         faturaResponseDTO.setId(1L);
