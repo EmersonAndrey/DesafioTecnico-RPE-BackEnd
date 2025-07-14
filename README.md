@@ -6,6 +6,11 @@ API RESTful desenvolvida para gerenciar clientes e suas respectivas faturas. O s
 
 ## 🧱 Tecnologias Utilizadas
 
+🔹 **Frontend**
+- ⚛️ React
+- 🎨 HTML + CSS
+- 🎛️ Bootstrap
+
 🔹 **Backend**
  - ☕ Java 17  
  - 🧩 Spring Boot
@@ -173,6 +178,14 @@ Também é possível testar com ferramentas como Postman ou Insomnia.
  }
 ]
 ```
+
+---
+
+## 🧩 Integração com o Frontend
+
+Para executar o sistema completo, clone e rode também o frontend:
+
+🔗 [Repositório do Frontend](https://github.com/EmersonAndrey/DesafioTecnico-RPE-FrontEnd)
 
 ---
 
